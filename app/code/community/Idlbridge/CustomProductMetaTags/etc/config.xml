@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Idlbridge_CustomProductMetaTags>
+            <version>0.1.0</version>
+        </Idlbridge_CustomProductMetaTags>
+    </modules>
+    <global>
+        <models>
+            <customproductmetatags>
+                <class>Idlbridge_CustomProductMetaTags_Model</class>
+            </customproductmetatags>
+        </models>
+        <helpers>
+            <customproductmetatags>
+                <class>Idlbridge_CustomProductMetaTags_Helper</class>
+            </customproductmetatags>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <catalog_controller_product_view>
+                <observers>
+                    <customproductmetatags>
+                        <type>singleton</type>
+                        <class>customproductmetatags/observer</class>
+                        <method>catalogControllerProductView</method>
+                    </customproductmetatags>
+                </observers>
+            </catalog_controller_product_view>
+        </events>
+    </frontend>
+ </config>
