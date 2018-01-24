@@ -8,7 +8,7 @@ class Idlbridge_CustomProductMetaTags_Model_Observer
 		if($product INSTANCEOF Mage_Catalog_Model_Product) {
 			if($product->getMetaTitle() == '') {
                 $productName = $product->getName();
-                $title = "buy ".$productName." online uk";
+                $title = $productName;
                 $product->setMetaTitle($title);
             }
 		}
